@@ -14,13 +14,15 @@ fi
 
 echo "installing mysql"
 
-dnf install mysql -y
+Package=$@
+
+dnf install $Package -y
 
 if [ $? -eq 0 ]
 then
-	echo "mysql installed successfully"
+	echo "$Package installed successfully"
 else
-	echo "mysql installation failed"
+	echo "$Package installation failed"
 fi
 
 
