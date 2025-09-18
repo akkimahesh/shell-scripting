@@ -14,15 +14,15 @@ fi
 
 echo "installing mysql"
 
-Package=$@
 
-dnf install $Package -y
+
+dnf install mysql-community-server -y
 
 if [ $? -eq 0 ]
 then
-	echo "$Package installed successfully"
+	echo "mysql-community-server installed successfully"
 else
-	echo "$Package installation failed"
+	echo "mysql-community-server installation failed"
 fi
 
 
