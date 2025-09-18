@@ -12,15 +12,15 @@ else
 	echo "you're in Root User"
 fi
 
-echo "installing mysql server"
+echo "installing mysql"
 
-dnf install mysql-server -y
+dnf install mysql -y
 
 if [ $? -eq 0 ]
 then
-	echo "mysql server installed successfully"
+	echo "mysql installed successfully"
 else
-	echo "mysql server installation failed"
+	echo "mysql installation failed"
 fi
 
 
