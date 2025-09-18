@@ -2,9 +2,9 @@
 
 #checking the root user or not
 
-USER=$(whoami)
+USER=$(id -u)
 
-if [ $USER -ne root ]
+if [ $USER -ne 0 ]
 then
 	echo "switch User"
 else
