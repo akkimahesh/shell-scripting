@@ -11,18 +11,14 @@ then
 else
 	echo "you're in Root User"
 fi
-
-echo "installing mysql"
-
-
-
+#installing mysql-community-server
 dnf install mysql-community-server -y
 
-if [ $? -eq 0 ]
+if [ $? -ne 0 ]
 then
-	echo "mysql-community-server installed successfully"
-else
 	echo "mysql-community-server installation failed"
+else
+	echo "mysql-community-server installing completed"
 fi
 
 
