@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# This script is to install MySQL on RHEL/CentOS 9
 #checking the root user or not
 
 USER=$(id -u)
