@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DIRECTORY="/tem/shellscripts"
+DIRECTORY="/tmp/shellscripts"
 
 if [ ! -d "$DIRECTORY" ]; then
   echo "Directory $DIRECTORY does not exist."
