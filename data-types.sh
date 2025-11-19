@@ -1,0 +1,12 @@
+NUMBER1=$1
+NUMBER2=$2
+
+SUM=$((NUMBER1+NUMBER2))
+
+echo "Sum of Numbers $SUM"
+
+echo $#
+
+echo $@
+
+echo $0
