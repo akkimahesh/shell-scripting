@@ -1,7 +1,6 @@
 AMI=ami-095165dc733487595
 SG=sg-0e60afdae6e80a348
-INSTANCES=("mongodb" "redis" "mysql" "rabbitmq" "web" \
-"catalogue" "user" "cart" "shipping" "dispatch" "payment")
+INSTANCES=("mongodb" "redis" "mysql" "rabbitmq")
 
 for i in "${INSTANCES[@]}"; do
     if [[ "$i" == "mongodb" || "$i" == "mysql" || "$i" == "shipping" ]]; then
@@ -9,7 +8,7 @@ for i in "${INSTANCES[@]}"; do
     else
         INSTANCE_TYPE=t2.micro
     fi
-    echo "Instance: $INSTANCE uses $INSTANCE_TYPE"
+    echo "Instance: $i uses $INSTANCE_TYPE"
 done
 
 # aws ec2 run-instances \
