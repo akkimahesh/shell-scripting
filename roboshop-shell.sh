@@ -12,8 +12,10 @@ for i in "${INSTANCES[@]}"; do
     echo "Instance: $INSTANCE uses $INSTANCE_TYPE"
 done
 
-aws ec2 run-instances \
---image-id $AMI \
---instance-type $INSTANCE_TYPE \
---security-group-ids $SG \
---tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=$i}]"
+# aws ec2 run-instances \
+# --image-id $AMI \
+# --instance-type $INSTANCE_TYPE \
+# --security-group-ids $SG \
+# --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=$i}]"
+
+aws ec2 run-instances --image-id $AMI --instance-type $INSTANCE_TYPE --security-group-ids sg-087e7afb3a936fce7 --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=$i}]" --query 'Instances[0].PrivateIpAddress' --output text
