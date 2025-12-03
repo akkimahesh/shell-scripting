@@ -1,10 +1,9 @@
-
 #!/bin/bash
 
 AMI=ami-095165dc733487595
 SG=sg-0e60afdae6e80a348 
 INSTANCES=("mongodb" "redis" "mysql" "rabbitmq" "catalogue" "user" "cart" "shipping" "payment" "dispatch" "web")
-ZONE_ID=Z104317737D96UJVA7NEF # replace your zone ID
+ZONE_ID=Z02868402LCI9EOU8D3TT # replace your zone ID
 DOMAIN_NAME="maheshakki.shop""
 
 for i in "${INSTANCES[@]}"
