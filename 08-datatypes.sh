@@ -10,4 +10,14 @@ NAME=Mahesh
 FULLNAME="${SURNAME} ${NAME}" #To Combine String use {}
 echo "My FullName is :: $FULLNAME"
 
-#array
+
+#!/bin/bash
+
+# Array
+CARS=("scorpio" "verna" "BMW")
+
+#use {} brances to access array elements
+echo "List of cars :: ${CARS[@]}"
+echo "First car :: ${CARS[0]}"
+echo "Second car :: ${CARS[1]}"
+echo "Third car :: ${CARS[2]}"
