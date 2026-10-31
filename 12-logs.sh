@@ -9,6 +9,8 @@ USER=$(id -u)
 LOGS_FOLDER="/tmp/shellscript"
 LOGS_FILE="$LOGS_FOLDER/$0.log"
 
+mkdir -p $LOGS_FOLDER
+
 if [ $USER -ne 0 ]
 then
     echo "please run this Script as a root User"
@@ -26,8 +28,6 @@ VALIDATE(){
         echo "$2...Success"
     fi
 }
-mkdir -p $LOGS_FOLDER 
-VALIDATE $? "Created Directory"
 
 dnf install nginx -y &> $LOGS_FILE
 VALIDATE $? "Installing Nginx" 
