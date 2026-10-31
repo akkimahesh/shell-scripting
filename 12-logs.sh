@@ -13,7 +13,7 @@ mkdir -p $LOGS_FOLDER
 
 if [ $USER -ne 0 ]
 then
-    echo "please run this Script as a root User"
+    echo "please run this Script as a root User" | tee -a "$LOGS_FILE"
     exit 1
 else
     echo "Perfect you're in Root user" | tee -a "$LOGS_FILE"
@@ -29,5 +29,5 @@ VALIDATE(){
     fi
 }
 
-dnf install nginx -y &> $LOGS_FILE
+dnf install nginx -y &>> $LOGS_FILE
 VALIDATE $? "Installing Nginx" 
