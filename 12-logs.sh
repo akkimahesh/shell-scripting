@@ -16,16 +16,16 @@ then
     echo "please run this Script as a root User"
     exit 1
 else
-    echo "Perfect you're in Root user" | tee $LOGS_FILE
+    echo "Perfect you're in Root user" | tee "$LOGS_FILE"
 fi
 
 VALIDATE(){
     if [ $1 -ne 0  ]
     then
-        echo "$2...Failed"
+        echo "$2...Failed" | tee "$LOGS_FILE"
         exit 1
     else
-        echo "$2...Success"
+        echo "$2...Success" | tee "$LOGS_FILE"
     fi
 }
 
