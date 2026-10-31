@@ -22,4 +22,4 @@ VALIDATE(){
 dnf install nginx -y
 #ikkada above command exist status value storaged in $?.
 #that $? is parameter for function.
-VALIDATE() $? "Installing Nginx" 
+VALIDATE $? "Installing Nginx" 
