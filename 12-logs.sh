@@ -3,8 +3,8 @@
 #because when scheduled scripts we check logs whether it is success or not.
 #1> if success then only terminal output stored in logs
 #2> if failure then only terminal output stored in logs
-#&> if success or failure then only terminal output stored in logs.
-# tee command reads the output and append into log file
+#&> if success or failure then terminal output stored in logs.
+# tee command reads the  terminal output and append into log file
 USER=$(id -u)
 LOGS_FOLDER="/tmp/shellscript"
 LOGS_FILE="$LOGS_FOLDER/$0.log"
