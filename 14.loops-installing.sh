@@ -24,7 +24,7 @@ VALIDATE(){
     fi
 }
 
-for package in S@ #nginx, mysql, nodejs
+for package in $@ #nginx, mysql, nodejs
 do
     if [ $? -ne 0 ]; then
         echo "$package is not Installed"
