@@ -26,6 +26,8 @@ VALIDATE(){
 
 for package in $@ #nginx, mysql, nodejs
 do
+    dnf list installed $package &>> $LOGS_FILE
+  
     if [ $? -ne 0 ]; then
         echo "$package is not Installed"
         dnf install $package -y &>> $LOGS_FILE
