@@ -12,19 +12,19 @@ mkdir -p $LOGS_FOLDER
 
 if [ $USER -ne 0 ]
 then
-    echo "please run this Script as a $RED root User $NC" | tee -a "$LOGS_FILE"
+    echo -e "please run this Script as a $RED root User $NC" | tee -a "$LOGS_FILE"
     exit 1
 else
-    echo "Perfect you're in  $GREEN Root user $NC" | tee -a "$LOGS_FILE"
+    echo -e "Perfect you're in  $GREEN Root user $NC" | tee -a "$LOGS_FILE"
 fi
 
 VALIDATE(){
     if [ $1 -ne 0  ]
     then
-        echo "$2...$RED Failed $NC" | tee -a "$LOGS_FILE"
+        echo -e "$2...$RED Failed $NC" | tee -a "$LOGS_FILE"
         exit 1
     else
-        echo "$2...$ GREEN Success $NC" | tee -a "$LOGS_FILE"
+        echo -e "$2...$ GREEN Success $NC" | tee -a "$LOGS_FILE"
     fi
 }
 
@@ -37,6 +37,6 @@ do
         dnf install $package -y &>> $LOGS_FILE
         VALIDATE $? "Installing $package"
     else
-        echo "$package is already installed..$YELLOW skip $NC"
+        echo -e "$package is already installed..$YELLOW skip $NC"
     fi
 done
