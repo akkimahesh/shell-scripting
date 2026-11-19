@@ -5,7 +5,7 @@ GREEN='\e[32m'
 YELLOW='\e[33m'
 NC='\e[0m' # No Color (Reset)
 
-echo "Print $RED RED colour"
-echo "Print $GREEN GREEN colour"
-echo "Print $YELLOW YELLOW colour"
-echo "Print $NC NO colour"
+echo -e "Print $RED RED colour"
+echo -e "Print $GREEN GREEN colour"
+echo -e "Print $YELLOW YELLOW colour"
+echo -e "Print $NC NO colour"
