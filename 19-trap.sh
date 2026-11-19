@@ -1,6 +1,6 @@
 #!/bin/bash
 
-trap 'echo "Current line: $LINENO $BASH_COMMAND Error"' ERR
+trap 'echo "Current line: $LINENO $package Error"' ERR
 RED='\e[31m'
 GREEN='\e[32m'
 YELLOW='\e[33m'
